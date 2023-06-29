@@ -1,0 +1,10 @@
+/* 
+    BaseLocalizable.strings
+  
+
+  Created by pablo borquez on 29/06/23.
+  
+*/
+
+internalServerError = "Ha ocurrido un problema en el servidor, por favor inténtelo más tarde";
+serverUnreachable = "No se ha podido conectar con el servidor, por favor verifique su conexión a internet o inténtelo más tarde";
