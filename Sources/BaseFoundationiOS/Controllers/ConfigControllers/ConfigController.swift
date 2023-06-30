@@ -10,6 +10,8 @@ import Foundation
 open class ConfigController {
     private let documentName: String = "Config"
     private let documentExtension: String = "plist"
+    
+    required public init() { }
 
     open func object(forKey key: String) -> NSDictionary {
         let result: NSDictionary!

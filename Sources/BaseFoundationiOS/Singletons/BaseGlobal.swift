@@ -8,7 +8,7 @@
 import Foundation
 
 open class BaseGlobal {
-    public lazy var configCache: NSCache<NSString, NSDictionary> = NSCache<NSString, NSDictionary>()
+    public lazy var configCache = NSCache<NSString, NSDictionary>()
 
     public init() { }
 }
