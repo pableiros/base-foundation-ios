@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ConfigController {
+open class ConfigController {
     private let documentName: String = "Config"
     private let documentExtension: String = "plist"
 
-    func object(forKey key: String) -> NSDictionary {
+    open func object(forKey key: String) -> NSDictionary {
         let result: NSDictionary!
 
         if let cachedVersion: NSDictionary = AppConfiguration.shared.baseGlobal.configCache.object(forKey: key as NSString) {
@@ -26,7 +26,7 @@ class ConfigController {
         return result
     }
 
-    func getConfigContent() -> NSDictionary {
+    open func getConfigContent() -> NSDictionary {
         let pListUrl: URL = Bundle.main.url(forResource: self.documentName, withExtension: self.documentExtension)!
         let plistDocument: NSDictionary = NSDictionary(contentsOf: pListUrl)!
 
