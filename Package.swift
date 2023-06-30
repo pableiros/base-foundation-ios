@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "BaseFoundationiOS",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16), .macOS(.v13)
     ],
@@ -26,7 +27,7 @@ let package = Package(
                 .product(name: "Alamofire", package: "Alamofire")
             ],
             resources: [
-                .copy("SupportingFiles")
+                .process("SupportingFiles")
             ]),
         .testTarget(
             name: "BaseFoundationiOSTests",

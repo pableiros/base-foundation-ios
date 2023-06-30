@@ -16,9 +16,6 @@ extension String {
     }
     
     public func translateCoreLocalizable() -> String {
-        return NSLocalizedString(self,
-                                 tableName: "BaseLocalizables",
-                                 bundle: Bundle.module,
-                                 comment: "")
+        return NSLocalizedString(self, bundle: Bundle.module, comment: "")
     }
 }
