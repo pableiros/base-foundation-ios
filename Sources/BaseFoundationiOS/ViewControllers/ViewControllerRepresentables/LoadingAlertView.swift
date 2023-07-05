@@ -12,6 +12,11 @@ public struct LoadingAlertView: UIViewControllerRepresentable {
 
     public var loadingMessage: String
     
+    public init(isLoading: Binding<Bool>, loadingMessage: String) {
+        self._isLoading = isLoading
+        self.loadingMessage = loadingMessage
+    }
+    
     @MainActor public func makeUIViewController(context: Context) -> UIViewController {
         return UIViewController()
     }

@@ -1,6 +1,10 @@
+# 0.2.1
+
+- `LoadingAlertView` `init` fixed.
+
 # 0.2.0
 
-- `LoadingalertView` implemented.
+- `LoadingAlertView` implemented.
 
 # 0.1.0
 
