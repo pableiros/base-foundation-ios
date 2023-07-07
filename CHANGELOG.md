@@ -1,3 +1,7 @@
+# 0.4.0
+
+- `AsyncAwaitHandler` implemented.
+
 # 0.3.4
 
 - `public init` implemented on `BaseModel`.
