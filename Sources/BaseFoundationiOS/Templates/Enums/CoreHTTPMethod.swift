@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum CoreHTTPMethod {
+public enum CoreHTTPMethod {
     case connect
     case delete
     case get
@@ -19,11 +19,11 @@ enum CoreHTTPMethod {
     case put
     case trace
 
-    func getRawValue() -> String {
+    public func getRawValue() -> String {
         return self.getAlamofireValue().rawValue
     }
 
-    func getAlamofireValue() -> Alamofire.HTTPMethod {
+    public func getAlamofireValue() -> Alamofire.HTTPMethod {
         let alamofireHttpMethod: Alamofire.HTTPMethod
 
         switch self {

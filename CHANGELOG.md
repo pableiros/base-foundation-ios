@@ -1,3 +1,7 @@
+# 0.3.3
+
+- `public` accesors implemented.
+
 # 0.3.2
 
 - `public init` implemented on `BaseRESTAPIModel`.
