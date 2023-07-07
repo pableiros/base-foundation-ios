@@ -1,3 +1,7 @@
+# 0.3.1
+
+- `public init` implemented on `EndPointManager`.
+
 # 0.3.0
 
 - `BaseModel` implemented.

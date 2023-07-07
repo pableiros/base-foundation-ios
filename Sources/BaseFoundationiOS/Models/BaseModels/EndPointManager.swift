@@ -12,6 +12,9 @@ open class EndPointManager {
 
     open var endPointSelected: String = "Main"
     open var envSelected: String?
+    
+    public init() {
+    }
 
     open func getURL(forKey key: RawValueDataSource) -> String {
         self.getURL(forKey: key.rawValue)
