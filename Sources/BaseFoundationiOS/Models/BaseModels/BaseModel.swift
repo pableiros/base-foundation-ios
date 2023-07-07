@@ -10,6 +10,9 @@ import Foundation
 open class BaseModel {
     open var endPointManager: EndPointManager = EndPointManager()
 
+    public init() {
+    }
+    
     open func getRESTApiModel() -> BaseRESTAPIModel {
         return BaseRESTAPIModel()
     }

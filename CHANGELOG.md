@@ -1,3 +1,7 @@
+# 0.3.4
+
+- `public init` implemented on `BaseModel`.
+
 # 0.3.3
 
 - `public` accesors implemented.
