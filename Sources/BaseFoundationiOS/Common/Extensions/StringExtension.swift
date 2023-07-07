@@ -18,4 +18,9 @@ extension String {
     public func translateCoreLocalizable() -> String {
         return NSLocalizedString(self, bundle: Bundle.module, comment: "")
     }
+    
+    public func isFullEmpty() -> Bool {
+        let trimmedString: String = self.trimmingCharacters(in: CharacterSet.whitespaces)
+        return trimmedString.isEmpty
+    }
 }

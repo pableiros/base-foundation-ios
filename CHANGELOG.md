@@ -1,3 +1,7 @@
+# 0.3.0
+
+- `BaseModel` implemented.
+
 # 0.2.1
 
 - `LoadingAlertView` `init` fixed.
