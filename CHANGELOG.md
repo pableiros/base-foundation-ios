@@ -1,3 +1,7 @@
+# 0.5.0
+
+- `ErrorHandler` implemented.
+
 # 0.4.0
 
 - `AsyncAwaitHandler` implemented.
