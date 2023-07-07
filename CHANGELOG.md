@@ -1,3 +1,7 @@
+# 0.3.2
+
+- `public init` implemented on `BaseRESTAPIModel`.
+
 # 0.3.1
 
 - `public init` implemented on `EndPointManager`.

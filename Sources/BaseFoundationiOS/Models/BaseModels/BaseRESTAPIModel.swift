@@ -38,7 +38,7 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
     private var resumeNotification: NSObjectProtocol?
     private var cancelNotification: NSObjectProtocol?
     
-    override init() {
+    override public init() {
         let settingsController = AppConfiguration.shared.settingsControllerType.init()
         let printRawKey = BaseSettingsController.BaseKey.printRawResponse.rawValue
 
