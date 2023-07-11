@@ -7,6 +7,6 @@
 
 import Foundation
 
-final public class Logger {
+final public class MainLogger {
     public static var shared: LoggerProtocol?
 }

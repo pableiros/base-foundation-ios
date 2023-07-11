@@ -1,3 +1,7 @@
+# main
+
+- `Logger` renamed to `MainLogger`.
+
 # 0.6.0
 
 - `ErrorAsyncHandler` implemented.

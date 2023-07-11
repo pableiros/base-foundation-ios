@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 public protocol LoggerProtocol {
     func debug(_ message: Any?)
@@ -29,7 +30,7 @@ extension LoggerProtocol {
         let endPointValue: String = processInfoHelper.getValue(fromKey: "ENABLE_RESTAPI_LOG", withDefault: "1")
 
         if endPointValue == "1" {
-            Logger.shared?.debug(message)
+            MainLogger.shared?.debug(message)
         }
     }
 }

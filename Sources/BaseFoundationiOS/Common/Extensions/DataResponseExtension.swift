@@ -16,7 +16,7 @@ extension DataResponse {
             do {
                 value = try JSONSerialization.jsonObject(with: data)
             } catch {
-                Logger.shared?.error(error,
+                MainLogger.shared?.error(error,
                                      className: String(describing: self),
                                      method: #function,
                                      line: #line)
@@ -33,11 +33,11 @@ extension DataResponse {
     private func printResponse(value: Any?, printRawResponse: Bool) {
         #if DEBUG
         if let dict = value as? [String: Any] {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
         } else if let array = value as? [[String: Any]] {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(array.toJSONText())")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(array.toJSONText())")
         } else {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(value ?? "nil")")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(value ?? "nil")")
         }
         
         if printRawResponse {
@@ -51,7 +51,7 @@ extension DataResponse {
             }
             
             if let data = data, let utf8Text = String(data: data, encoding: .utf8) {
-                Logger.shared?.printBaseRESTAPI("Raw response: \(utf8Text)")
+                MainLogger.shared?.printBaseRESTAPI("Raw response: \(utf8Text)")
             }
         }
         #endif

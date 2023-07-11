@@ -215,14 +215,14 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
         }
 
         #if DEBUG
-        Logger.shared?.printBaseRESTAPI("\(requestName) Request completed")
+        MainLogger.shared?.printBaseRESTAPI("\(requestName) Request completed")
         
         if let response = response.response {
             if let url = response.url {
-                Logger.shared?.printBaseRESTAPI("URL: \(url)")
+                MainLogger.shared?.printBaseRESTAPI("URL: \(url)")
             }
             
-            Logger.shared?.printBaseRESTAPI("Http code: \((response.statusCode))")
+            MainLogger.shared?.printBaseRESTAPI("Http code: \((response.statusCode))")
         }
         #endif
         
@@ -240,7 +240,7 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
                                              completionHandler: completionHandler)
             
             #if DEBUG
-            Logger.shared?.printBaseRESTAPI("\(requestName) request handled: \(handled)")
+            MainLogger.shared?.printBaseRESTAPI("\(requestName) request handled: \(handled)")
             #endif
         }
     }
@@ -256,22 +256,22 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
         let chainResponses: [RESTAPIChainResponse.Type] = self.prepareChainResponse(chainResponse: finalChainResponse)
         
         #if DEBUG
-        Logger.shared?.printBaseRESTAPI("\(requestName) Request completed")
+        MainLogger.shared?.printBaseRESTAPI("\(requestName) Request completed")
         
         if let dict = response.value as? [String: Any] {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
         } else if let array = response.value as? [[String: Any]] {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(array.toJSONText())")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(array.toJSONText())")
         } else {
-            Logger.shared?.printBaseRESTAPI("REST Response: \(response)")
+            MainLogger.shared?.printBaseRESTAPI("REST Response: \(response)")
         }
         
         if self.printRawResponse, let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-            Logger.shared?.printBaseRESTAPI("Raw response: \(utf8Text)")
+            MainLogger.shared?.printBaseRESTAPI("Raw response: \(utf8Text)")
         }
         
         if response.response != nil {
-            Logger.shared?.printBaseRESTAPI("Http code: \((response.response?.statusCode)!)")
+            MainLogger.shared?.printBaseRESTAPI("Http code: \((response.response?.statusCode)!)")
         }
         #endif
         
@@ -287,7 +287,7 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
                                              completionHandler: completionHandler)
             
             #if DEBUG
-            Logger.shared?.printBaseRESTAPI("\(requestName) request handled: \(handled)")
+            MainLogger.shared?.printBaseRESTAPI("\(requestName) request handled: \(handled)")
             #endif
         }
     }
@@ -363,15 +363,15 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
     
     private func logRequest(method: String, url: String, bodyParameters: [String: Any]?, headers: HTTPHeaders?) {
         #if DEBUG
-        Logger.shared?.printBaseRESTAPI("-------------------- REQUEST --------------------")
-        Logger.shared?.printBaseRESTAPI(String(format: "\(method): %@", url))
+        MainLogger.shared?.printBaseRESTAPI("-------------------- REQUEST --------------------")
+        MainLogger.shared?.printBaseRESTAPI(String(format: "\(method): %@", url))
         
         if let headers = headers {
-            Logger.shared?.printBaseRESTAPI(String(format: "HEADERS: %@", headers.dictionary.toJSONText()))
+            MainLogger.shared?.printBaseRESTAPI(String(format: "HEADERS: %@", headers.dictionary.toJSONText()))
         }
         
         if let bodyParameters: [String: Any] = bodyParameters {
-            Logger.shared?.printBaseRESTAPI("BODY PARAMETERS: \(bodyParameters.toJSONText())")
+            MainLogger.shared?.printBaseRESTAPI("BODY PARAMETERS: \(bodyParameters.toJSONText())")
         }
         
         #endif

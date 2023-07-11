@@ -13,4 +13,6 @@ final public class AppConfiguration {
     public var baseGlobal = BaseGlobal()
     public var baseGlobalSession = BaseGlobalSession()
     public var settingsControllerType: BaseSettingsController.Type = BaseSettingsController.self
+    
+    let subsystem = "BaseFoundation"
 }
