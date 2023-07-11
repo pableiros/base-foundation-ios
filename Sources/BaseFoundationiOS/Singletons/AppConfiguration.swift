@@ -10,9 +10,13 @@ import Foundation
 final public class AppConfiguration {
     public static let shared: AppConfiguration = AppConfiguration()
     
+    public var isOsLoggerRequired = false
+    
     public var baseGlobal = BaseGlobal()
     public var baseGlobalSession = BaseGlobalSession()
     public var settingsControllerType: BaseSettingsController.Type = BaseSettingsController.self
     
     let subsystem = "BaseFoundation"
+    
+    let osLoggerCache = NSCache<NSString, OSLoggerContainer>()
 }

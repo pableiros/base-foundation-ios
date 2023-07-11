@@ -1,6 +1,7 @@
-# main
+# 0.7.0
 
 - `Logger` renamed to `MainLogger`.
+- `OSLogger` implemented.
 
 # 0.6.0
 

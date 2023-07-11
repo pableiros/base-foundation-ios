@@ -15,6 +15,10 @@ extension String {
         return "\(self)*"
     }
     
+    public func toNSString() -> NSString {
+        return NSString(string: self)
+    }
+    
     public func translateCoreLocalizable() -> String {
         return NSLocalizedString(self, bundle: Bundle.module, comment: "")
     }
