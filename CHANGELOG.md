@@ -1,3 +1,7 @@
+# 0.9.0
+
+- `LocalizableProtocol` implemented.
+
 # 0.8.1
 
 - `LoadingAlertView` validation fixed.
