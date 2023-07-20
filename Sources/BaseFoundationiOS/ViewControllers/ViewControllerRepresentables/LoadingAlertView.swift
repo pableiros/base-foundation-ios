@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(iOS) || os(macOS)
 public struct LoadingAlertView: UIViewControllerRepresentable {
     @Binding public var isLoading: Bool
 
@@ -50,3 +51,4 @@ public struct LoadingAlertView: UIViewControllerRepresentable {
         }
     }
 }
+#endif

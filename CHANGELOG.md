@@ -1,3 +1,8 @@
+# 0.8.0
+
+- `Keychain` implemented.
+- `LoadingAlertView` limited to `iOS` and `macOS`.
+ 
 # 0.7.0
 
 - `Logger` renamed to `MainLogger`.
