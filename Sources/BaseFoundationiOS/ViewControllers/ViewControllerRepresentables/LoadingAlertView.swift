@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-#if os(iOS) || os(macOS)
+#if os(iOS) || targetEnvironment(macCatalyst)
 public struct LoadingAlertView: UIViewControllerRepresentable {
     @Binding public var isLoading: Bool
 

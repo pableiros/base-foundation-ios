@@ -1,3 +1,7 @@
+# 0.8.1
+
+- `LoadingAlertView` validation fixed.
+
 # 0.8.0
 
 - `Keychain` implemented.
