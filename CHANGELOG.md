@@ -1,3 +1,7 @@
+# master
+
+- `Validators` implemented.
+
 # 0.10.0
 
 - `toddMMyyyy(isUTCRequired:)` implemented on `DateExtension`.
