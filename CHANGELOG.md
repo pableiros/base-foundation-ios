@@ -2,6 +2,7 @@
 
 - `Validators` implemented.
 - `AsyncAwaitHandler` renamed to `AsyncThrowsHandler`.
+- `AsyncHandler` implemented.
 
 # 0.10.0
 
