@@ -4,6 +4,7 @@
 - `AsyncAwaitHandler` renamed to `AsyncThrowsHandler`.
 - `AsyncHandler` implemented.
 - `AsyncButton` created.
+- `AlertViewModifier` implemented.
 
 # 0.10.0
 
