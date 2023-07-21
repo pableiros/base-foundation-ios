@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  AsyncButton.swift
 //  
 //
 //  Created by pablo borquez on 21/07/23.
@@ -7,14 +7,22 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+public struct AsyncButton<Label>: View where Label : View {
+    let action: AsyncHandler
+    let label: () -> Label
+    
+    public init(action: @escaping AsyncHandler, @ViewBuilder label: @escaping () -> Label) {
+        self.action = action
+        self.label = label
     }
-}
-
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
+    
+    public var body: some View {
+        Button {
+            Task {
+                await self.action()
+            }
+        } label: {
+            self.label()
+        }
     }
 }
