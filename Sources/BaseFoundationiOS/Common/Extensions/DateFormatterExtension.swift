@@ -15,6 +15,13 @@ extension DateFormatter {
         return dateFormatter
     }
     
+    public static func createddMMyyyy() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        return dateFormatter
+    }
+    
     public static func createHourInstance() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

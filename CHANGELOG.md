@@ -1,3 +1,8 @@
+# 0.10.0
+
+- `toddMMyyyy(isUTCRequired:)` implemented on `DateExtension`.
+- `createddMMyyyy()` implemented on `DateFormatterExtension`.
+
 # 0.9.0
 
 - `LocalizableProtocol` implemented.
