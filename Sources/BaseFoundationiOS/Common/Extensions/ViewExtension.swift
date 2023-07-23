@@ -8,6 +8,13 @@
 import SwiftUI
 
 extension View {
+ 
+    public func onAsyncSubmit(action: @escaping AsyncHandler) -> some View {
+        self.modifier(AsyncSubmitViewModifier(action: action))
+    }
+    
+    // MARK: - alert
+    
     public func presentAlert(withTitle title: String,
                              andMessage message: String,
                              isPresented: Binding<Bool>,

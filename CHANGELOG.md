@@ -4,6 +4,7 @@
 - `AsyncAwaitHandler` renamed to `AsyncThrowsHandler`.
 - `AsyncHandler` implemented.
 - `AsyncButton` created.
+- `AsyncSubmitViewModifier` implemented.
 - `AlertViewModifier` implemented.
 - `DoubleExtension` implemented.
 - `toDouble` implemented on `StringExtension`.
