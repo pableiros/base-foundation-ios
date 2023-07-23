@@ -6,6 +6,7 @@
 - `AsyncButton` created.
 - `AlertViewModifier` implemented.
 - `DoubleExtension` implemented.
+- `toDouble` implemented on `StringExtension`.
 
 # 0.10.0
 

@@ -19,6 +19,10 @@ extension String {
         return NSString(string: self)
     }
     
+    public  func toDouble() -> Double {
+        return Double(self) ?? 0
+    }
+    
     public func translateCoreLocalizable() -> String {
         return NSLocalizedString(self, bundle: Bundle.module, comment: "")
     }
