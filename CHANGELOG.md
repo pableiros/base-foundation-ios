@@ -5,6 +5,7 @@
 - `AsyncHandler` implemented.
 - `AsyncButton` created.
 - `AlertViewModifier` implemented.
+- `DoubleExtension` implemented.
 
 # 0.10.0
 
