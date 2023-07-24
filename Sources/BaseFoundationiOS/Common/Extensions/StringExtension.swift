@@ -31,4 +31,23 @@ extension String {
         let trimmedString: String = self.trimmingCharacters(in: CharacterSet.whitespaces)
         return trimmedString.isEmpty
     }
+    
+    public func toDate() -> Date? {
+        return Date.createFromUTC(yyyyMMddHHmmss: self)
+    }
+    
+    public func ddMMyyyyToDate() -> Date? {
+        return Date.createFromddMMyyyy(self)
+    }
+    
+    public func toCommaSeparated() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.locale = Locale(identifier: "es_MX")
+        
+        let double = self.toDouble()
+        let number = NSNumber(value: double)
+        
+        return numberFormatter.string(from: number) ?? double.toString()
+    }
 }
