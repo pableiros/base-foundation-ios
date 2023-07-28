@@ -7,7 +7,7 @@
 - `AsyncSubmitViewModifier` implemented.
 - `AlertViewModifier` implemented.
 - `DoubleExtension` implemented.
-- `toDouble`, `toCommaSeparated`, `toDate` implemented on `StringExtension`.
+- `toDouble`, `toCommaSeparated`, `toDate`, `isInt, `isNumber` implemented on `StringExtension`.
 - `createFromUTC`, `createFromddMMyyyy` implemented on `DateExtension`. 
 
 # 0.10.0

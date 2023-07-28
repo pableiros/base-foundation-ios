@@ -11,6 +11,14 @@ extension String: Error {
 }
 
 extension String {
+    public var isNumber: Bool {
+        return self.isInt || Double(self) != nil
+    }
+    
+    public var isInt: Bool {
+        return Int(self) != nil
+    }
+    
     public var required: String {
         return "\(self)*"
     }
