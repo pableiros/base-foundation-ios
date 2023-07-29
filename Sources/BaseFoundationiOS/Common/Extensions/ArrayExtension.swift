@@ -18,3 +18,15 @@ extension Array {
         return jsonText.replacingOccurrences(of: #"\/"#, with: "/")
     }
 }
+
+extension Array where Element: Copying {
+    public func clone() -> Array {
+        var copiedArray = Array<Element>()
+        
+        for element in self {
+            copiedArray.append(element.copy())
+        }
+        
+        return copiedArray
+    }
+}

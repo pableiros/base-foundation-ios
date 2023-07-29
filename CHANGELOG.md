@@ -9,6 +9,7 @@
 - `DoubleExtension` implemented.
 - `toDouble`, `toCommaSeparated`, `toDate`, `isInt, `isNumber` implemented on `StringExtension`.
 - `createFromUTC`, `createFromddMMyyyy` implemented on `DateExtension`. 
+- `Copying` protocol implemented.
 
 # 0.10.0
 
