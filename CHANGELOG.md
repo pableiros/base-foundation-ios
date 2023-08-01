@@ -10,6 +10,7 @@
 - `toDouble`, `toCommaSeparated`, `toDate`, `isInt, `isNumber` implemented on `StringExtension`.
 - `createFromUTC`, `createFromddMMyyyy` implemented on `DateExtension`. 
 - `Copying` protocol implemented.
+- `public init` implemented on `JSONManager`.
 
 # 0.10.0
 

@@ -8,6 +8,8 @@
 import Foundation
 
 public class JSONManager {
+    public init() { }
+    
     public func createJsonObject(fromJsonFileName jsonFileName: String, bundle: Bundle = Bundle.main) -> Any? {
         var result: Any?
 
