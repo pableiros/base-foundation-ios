@@ -24,3 +24,9 @@ extension Dictionary {
         }
     }
 }
+
+extension Dictionary where Key == String {
+    public func get(for key: String) -> String? {
+        return self[key] as? String
+    }
+}

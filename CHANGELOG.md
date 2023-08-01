@@ -11,6 +11,7 @@
 - `createFromUTC`, `createFromddMMyyyy` implemented on `DateExtension`. 
 - `Copying` protocol implemented.
 - `public init` implemented on `JSONManager`.
+- `get(for:)` implemented on `DictionaryExtension`.
 
 # 0.10.0
 
