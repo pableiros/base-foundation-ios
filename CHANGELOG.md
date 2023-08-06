@@ -15,6 +15,7 @@
 - `ValueDataSource` protocol implemented.
 - `FirstCaseDataSource` protocol implemented.
 - `PickerToolbarType` type implemented.
+- `PickerToolbar SwiftUI` view implemented.
 
 # 0.10.0
 

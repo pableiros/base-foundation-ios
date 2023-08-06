@@ -38,4 +38,8 @@ extension View {
                           isCancelRequired: isCancelRequired,
                           okHandler: okHandler)
     }
+    
+    public func pickerToolbar<DataSource: PickerToolbarType>(pickerOnChange: @escaping (DataSource) -> Void)  -> some View where DataSource.AllCases == (Array<DataSource>) {
+        return self.modifier(PickerToolbarViewModifier(pickerOnChange: pickerOnChange))
+    }
 }
