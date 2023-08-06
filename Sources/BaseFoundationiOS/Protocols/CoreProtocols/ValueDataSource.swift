@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+public protocol ValueDataSource {
+    var value: String { get }
+}

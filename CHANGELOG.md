@@ -12,6 +12,7 @@
 - `Copying` protocol implemented.
 - `public init` implemented on `JSONManager`.
 - `get(for:)` implemented on `DictionaryExtension`.
+- `ValueDataSource` protocol implemented.
 
 # 0.10.0
 
