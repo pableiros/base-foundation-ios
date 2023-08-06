@@ -14,6 +14,7 @@
 - `get(for:)` implemented on `DictionaryExtension`.
 - `ValueDataSource` protocol implemented.
 - `FirstCaseDataSource` protocol implemented.
+- `PickerToolbarType` type implemented.
 
 # 0.10.0
 
