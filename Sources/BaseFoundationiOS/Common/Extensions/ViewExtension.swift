@@ -42,4 +42,8 @@ extension View {
     public func pickerToolbar<DataSource: PickerToolbarType>(pickerOnChange: @escaping (DataSource) -> Void)  -> some View where DataSource.AllCases == (Array<DataSource>) {
         return self.modifier(PickerToolbarViewModifier(pickerOnChange: pickerOnChange))
     }
+    
+    public func fontSystemRounded(_ style: Font.TextStyle) -> some View {
+        return self.font(.system(style, design: .rounded))
+    }
 }

@@ -16,6 +16,7 @@
 - `FirstCaseDataSource` protocol implemented.
 - `PickerToolbarType` type implemented.
 - `PickerToolbar SwiftUI` view implemented.
+- `fontSystemRounded` implemented on as `View` extension.
 
 # 0.10.0
 
