@@ -8,9 +8,12 @@
 import SwiftUI
 
 extension View {
- 
     public func onAsyncSubmit(action: @escaping AsyncHandler) -> some View {
         self.modifier(AsyncSubmitViewModifier(action: action))
+    }
+    
+    public func setMaxFrame(alignment: Alignment = .topLeading) -> some View {
+        self.modifier(MaxFrameViewModifier(alignment: alignment))
     }
     
     // MARK: - alert

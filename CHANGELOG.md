@@ -17,6 +17,7 @@
 - `PickerToolbarType` type implemented.
 - `PickerToolbar SwiftUI` view implemented.
 - `fontSystemRounded` implemented on as `View` extension.
+- `MaxFrameViewModifier` implemented.
 
 # 0.10.0
 
