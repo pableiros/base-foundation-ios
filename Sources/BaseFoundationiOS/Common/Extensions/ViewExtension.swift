@@ -16,6 +16,23 @@ extension View {
         self.modifier(MaxFrameViewModifier(alignment: alignment))
     }
     
+    public func pickerToolbar<DataSource: PickerToolbarType>(pickerOnChange: @escaping (DataSource) -> Void)  -> some View where DataSource.AllCases == (Array<DataSource>) {
+        return self.modifier(PickerToolbarViewModifier(pickerOnChange: pickerOnChange))
+    }
+    
+    public func fontSystemRounded(_ style: Font.TextStyle) -> some View {
+        return self.font(.system(style, design: .rounded))
+    }
+    
+    @ViewBuilder
+    public func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+    
     // MARK: - alert
     
     public func presentAlert(withTitle title: String,
@@ -40,13 +57,5 @@ extension View {
                           isPresented: isPresented,
                           isCancelRequired: isCancelRequired,
                           okHandler: okHandler)
-    }
-    
-    public func pickerToolbar<DataSource: PickerToolbarType>(pickerOnChange: @escaping (DataSource) -> Void)  -> some View where DataSource.AllCases == (Array<DataSource>) {
-        return self.modifier(PickerToolbarViewModifier(pickerOnChange: pickerOnChange))
-    }
-    
-    public func fontSystemRounded(_ style: Font.TextStyle) -> some View {
-        return self.font(.system(style, design: .rounded))
     }
 }

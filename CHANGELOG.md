@@ -18,6 +18,7 @@
 - `PickerToolbar SwiftUI` view implemented.
 - `fontSystemRounded` implemented on as `View` extension.
 - `MaxFrameViewModifier` implemented.
+- `if` func implemented on `ViewExtension`.
 
 # 0.10.0
 
