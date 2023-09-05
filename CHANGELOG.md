@@ -1,3 +1,7 @@
+# master
+
+- Dictionary `get` funcs added.
+
 # 0.11.0
 
 - `Validators` implemented.

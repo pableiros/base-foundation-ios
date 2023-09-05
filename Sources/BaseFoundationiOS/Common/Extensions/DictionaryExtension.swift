@@ -29,4 +29,28 @@ extension Dictionary where Key == String {
     public func get(for key: String) -> String? {
         return self[key] as? String
     }
+    
+    public func get(for key: String) -> Int {
+        var value: Int = 0
+
+        if let dictValue = self[key] as? Int {
+            value = dictValue
+        } else if let dictValue = self[key] as? String, let dictIntValue: Int = Int(dictValue) {
+            value = dictIntValue
+        }
+
+        return value
+    }
+
+    public func get(for key: String) -> Double {
+        var value: Double = 0
+
+        if let dictValue = self[key] as? Double {
+            value = dictValue
+        } else if let dictValue = self[key] as? String, let dictIntValue: Double = Double(dictValue) {
+            value = dictIntValue
+        }
+
+        return value
+    }
 }
