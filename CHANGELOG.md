@@ -2,6 +2,7 @@
 
 - Dictionary `get` funcs added.
 - `printBaseRESTAPI` set to `public` on `OSLogger`. 
+- `TokenType` implemented.
 
 # 0.11.0
 
