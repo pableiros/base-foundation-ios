@@ -30,7 +30,7 @@ open class OSLogger {
         logger.error("\(self.getPrintable(message: message))")
     }
     
-    func printBaseRESTAPI(_ message: Any?) {
+    public func printBaseRESTAPI(_ message: Any?) {
         let processInfoHelper = BaseProcessInfoHelper()
         let endPointValue: String = processInfoHelper.getValue(fromKey: "ENABLE_RESTAPI_LOG", withDefault: "1")
 
