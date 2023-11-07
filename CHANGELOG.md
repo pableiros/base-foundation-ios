@@ -4,6 +4,7 @@
 - `printBaseRESTAPI` set to `public` on `OSLogger`. 
 - `TokenType` implemented.
 - `EmailRequired` implemented.
+- `ValidatorDelegate` implemented.
 
 # 0.11.0
 
