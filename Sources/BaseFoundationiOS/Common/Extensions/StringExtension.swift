@@ -35,6 +35,13 @@ extension String {
         return NSLocalizedString(self, bundle: Bundle.module, comment: "")
     }
     
+    public func isEmail() -> Bool {
+        let regex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate: NSPredicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        
+        return predicate.evaluate(with: self)
+    }
+    
     public func isFullEmpty() -> Bool {
         let trimmedString: String = self.trimmingCharacters(in: CharacterSet.whitespaces)
         return trimmedString.isEmpty

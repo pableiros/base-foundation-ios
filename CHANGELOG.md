@@ -5,6 +5,7 @@
 - `TokenType` implemented.
 - `EmailRequired` implemented.
 - `ValidatorDelegate` implemented.
+- `isEmail` func implemented on `StringExtension`.
 
 # 0.11.0
 
