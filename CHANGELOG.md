@@ -6,6 +6,7 @@
 - `EmailRequired` implemented.
 - `ValidatorDelegate` implemented.
 - `isEmail` func implemented on `StringExtension`.
+- `FormViewValidatorDelegate` implemented.
 
 # 0.11.0
 
