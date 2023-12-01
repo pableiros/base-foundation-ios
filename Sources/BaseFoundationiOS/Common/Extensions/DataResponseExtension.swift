@@ -33,11 +33,11 @@ extension DataResponse {
     private func printResponse(value: Any?, printRawResponse: Bool) {
         #if DEBUG
         if let dict = value as? [String: Any] {
-            MainLogger.shared?.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
+            AppConfiguration.shared.printBaseRESTAPI("REST Response: \(dict.toJSONText())")
         } else if let array = value as? [[String: Any]] {
-            MainLogger.shared?.printBaseRESTAPI("REST Response: \(array.toJSONText())")
+            AppConfiguration.shared.printBaseRESTAPI("REST Response: \(array.toJSONText())")
         } else {
-            MainLogger.shared?.printBaseRESTAPI("REST Response: \(value ?? "nil")")
+            AppConfiguration.shared.printBaseRESTAPI("REST Response: \(value ?? "nil")")
         }
         
         if printRawResponse {
@@ -51,7 +51,7 @@ extension DataResponse {
             }
             
             if let data = data, let utf8Text = String(data: data, encoding: .utf8) {
-                MainLogger.shared?.printBaseRESTAPI("Raw response: \(utf8Text)")
+                AppConfiguration.shared.printBaseRESTAPI("Raw response: \(utf8Text)")
             }
         }
         #endif

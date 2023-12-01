@@ -401,10 +401,6 @@ open class BaseRESTAPIModel: BaseService, CompletionResultDelegate {
     }
     
     private func printBaseRESTAPI(message: Any) {
-        if AppConfiguration.shared.isOsLoggerRequired {
-            OSLogger.shared.printBaseRESTAPI(message)
-        } else {
-            MainLogger.shared?.printBaseRESTAPI(message)
-        }
+        AppConfiguration.shared.printBaseRESTAPI(message)
     }
 }

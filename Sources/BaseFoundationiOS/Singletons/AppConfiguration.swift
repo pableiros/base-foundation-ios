@@ -19,4 +19,12 @@ final public class AppConfiguration {
     let subsystem = "BaseFoundation"
     
     let osLoggerCache = NSCache<NSString, OSLoggerContainer>()
+    
+    func printBaseRESTAPI(_ message: Any?) {
+        if AppConfiguration.shared.isOsLoggerRequired {
+            OSLogger.shared.printBaseRESTAPI(message)
+        } else {
+            MainLogger.shared?.printBaseRESTAPI(message)
+        }
+    }
 }
