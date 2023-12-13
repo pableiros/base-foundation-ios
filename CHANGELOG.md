@@ -7,6 +7,7 @@
 - `ValidatorDelegate` implemented.
 - `isEmail` func implemented on `StringExtension`.
 - `FormViewValidatorDelegate` implemented.
+- `DateExtension` and `DateFormatterExtension` methos implemented.
 
 # 0.11.0
 

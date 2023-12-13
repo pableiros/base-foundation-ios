@@ -44,4 +44,14 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    public func toyyyyMMdd(isUTCRequired: Bool = false) -> String {
+        let dateFormatter = DateFormatter.createyyyyMMdd()
+        
+        if isUTCRequired {
+            dateFormatter.setUTC()
+        }
+        
+        return dateFormatter.string(from: self)
+    }
 }

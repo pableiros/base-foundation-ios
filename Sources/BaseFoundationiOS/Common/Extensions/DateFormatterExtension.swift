@@ -8,6 +8,13 @@
 import Foundation
 
 extension DateFormatter {
+    public static func createyyyyMMdd() -> DateFormatter {
+        let dateFormatter = Self.createHourInstance()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        return dateFormatter
+    }
+    
     public static func createyyyyMMddHHmmss() -> DateFormatter {
         let dateFormatter = Self.createHourInstance()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
