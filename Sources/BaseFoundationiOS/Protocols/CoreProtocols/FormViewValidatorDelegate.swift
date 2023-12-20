@@ -10,7 +10,7 @@ import Foundation
 public protocol FormViewValidatorDelegate {
     var errorMessage: String { get set }
     
-    func submitForm()
+    func submitForm() async
     func set(errorMessage: String)
 }
 extension FormViewValidatorDelegate {
@@ -18,7 +18,9 @@ extension FormViewValidatorDelegate {
         let validationResult = container.validate()
         
         if validationResult.isValid {
-            self.submitForm()
+            Task {
+                await self.submitForm()
+            }
         } else if let message = validationResult.message {
             self.set(errorMessage: message)
         }
