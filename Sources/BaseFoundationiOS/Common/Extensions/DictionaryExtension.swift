@@ -26,8 +26,12 @@ extension Dictionary {
 }
 
 extension Dictionary where Key == String {
-    public func get(for key: String) -> String? {
-        return self[key] as? String
+    public func get(for key: String) -> String {
+        return self[key] as? String ?? ""
+    }
+    
+    public func get(for key: String) -> Bool {
+        return self[key] as? Bool ?? false
     }
     
     public func get(for key: String) -> Int {
