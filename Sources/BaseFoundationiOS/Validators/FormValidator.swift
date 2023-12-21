@@ -7,8 +7,7 @@
 
 import Foundation
 
-public protocol FormValidator: AnyObject {
-    func prepareValuesToValidate() -> [ValidatorInput]
+public protocol FormValidator: ValidatorDelegate {
 }
 
 extension FormValidator {

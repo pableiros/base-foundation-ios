@@ -10,6 +10,7 @@
 - `DateExtension` and `DateFormatterExtension` methos implemented.
 - `DefaultOKChainResponse` implemented.
 - `ActionButton` implemented.
+- `FormState` implemented.
 
 # 0.11.0
 
