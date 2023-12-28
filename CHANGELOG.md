@@ -11,6 +11,7 @@
 - `DefaultOKChainResponse` implemented.
 - `ActionButton` implemented.
 - `FormState` implemented.
+- `ArrayRule` implemented.
 
 # 0.11.0
 
