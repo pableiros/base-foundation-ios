@@ -26,7 +26,6 @@ public struct ActionButton: View {
         Group {
             if self.isLoading {
                 Button {
-                    
                 } label: {
                     ProgressView()
                         .controlSize(.mini)
@@ -35,7 +34,7 @@ public struct ActionButton: View {
                 }
             } else {
                 Button {
-                    
+                    self.actionHandler()
                 } label: {
                     Text(self.title)
                 }
