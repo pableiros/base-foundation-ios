@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FormViewValidatorDelegate {
-    var errorMessage: String { get set }
+    var formState: FormState { get set }
     
     func submitForm() async
     func set(errorMessage: String)
