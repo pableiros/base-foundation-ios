@@ -1,4 +1,4 @@
-# master
+# 0.12.0
 
 - Dictionary `get` funcs added.
 - `printBaseRESTAPI` set to `public` on `OSLogger`. 
@@ -12,6 +12,7 @@
 - `ActionButton` implemented.
 - `FormState` implemented.
 - `ArrayRule` implemented.
+- `LoadingState` implemented.
 
 # 0.11.0
 
