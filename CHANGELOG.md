@@ -1,3 +1,8 @@
+# master
+
+- `GlobalTask` implemented.
+- `SearchableDelegate` implemented.
+
 # 0.12.0
 
 - Dictionary `get` funcs added.
