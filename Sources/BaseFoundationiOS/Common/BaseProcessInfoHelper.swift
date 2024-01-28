@@ -8,6 +8,9 @@
 import Foundation
 
 open class BaseProcessInfoHelper {
+    public init() {
+    }
+    
     public func getValue(fromKey key: String, withDefault defaultValue: String) -> String {
         let dict: [String: String] = ProcessInfo.processInfo.environment
         let value: String

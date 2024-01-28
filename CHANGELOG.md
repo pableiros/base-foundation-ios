@@ -2,6 +2,7 @@
 
 - `GlobalTask` implemented.
 - `SearchableDelegate` implemented.
+- `BaseProcessInfoHelper` `init` func implemented.
 
 # 0.12.0
 
