@@ -3,6 +3,7 @@
 - `GlobalTask` implemented.
 - `SearchableDelegate` implemented.
 - `BaseProcessInfoHelper` `init` func implemented.
+- `NavigationLazyView` implemented.
 
 # 0.12.0
 
