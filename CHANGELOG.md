@@ -5,6 +5,7 @@
 - `BaseProcessInfoHelper` `init` func implemented.
 - `NavigationLazyView` implemented.
 - `CheckView` implemented.
+- `SelectableRule` implemented.
 
 # 0.12.0
 
