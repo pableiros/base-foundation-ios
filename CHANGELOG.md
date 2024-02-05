@@ -4,6 +4,7 @@
 - `SearchableDelegate` implemented.
 - `BaseProcessInfoHelper` `init` func implemented.
 - `NavigationLazyView` implemented.
+- `CheckView` implemented.
 
 # 0.12.0
 
