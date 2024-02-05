@@ -6,6 +6,7 @@
 - `NavigationLazyView` implemented.
 - `CheckView` implemented.
 - `SelectableRule` implemented.
+- `DidSelectViewModifier` implemented
 
 # 0.12.0
 

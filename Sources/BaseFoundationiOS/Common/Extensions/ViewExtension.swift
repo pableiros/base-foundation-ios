@@ -1,6 +1,6 @@
 //
 //  ViewExtension.swift
-//  
+//
 //
 //  Created by pablo borquez on 21/07/23.
 //
@@ -31,6 +31,12 @@ extension View {
         } else {
             self
         }
+    }
+    
+    public func didSelect<Container: Equatable>(containerSelected: Container?
+                                                , successHandler: @escaping (Container) -> Void) -> some View {
+        return self.modifier(DidSelectViewModifier(containerSelected: containerSelected,
+                                                   successHandler: successHandler))
     }
     
     // MARK: - alert
