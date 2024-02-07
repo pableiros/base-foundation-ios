@@ -7,6 +7,8 @@
 - `CheckView` implemented.
 - `SelectableRule` implemented.
 - `DidSelectViewModifier` implemented
+- `getDay` implemented on `Date extension`.
+- `toInt` implemented on `String extension`. 
 
 # 0.12.0
 

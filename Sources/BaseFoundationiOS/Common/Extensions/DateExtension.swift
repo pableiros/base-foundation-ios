@@ -54,4 +54,11 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    public func getDay() -> Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd"
+        
+        return formatter.string(from: self).toInt()
+    }
 }

@@ -27,7 +27,11 @@ extension String {
         return NSString(string: self)
     }
     
-    public  func toDouble() -> Double {
+    public func toInt() -> Int {
+        return Int(self) ?? 0
+    }
+    
+    public func toDouble() -> Double {
         return Double(self) ?? 0
     }
     
