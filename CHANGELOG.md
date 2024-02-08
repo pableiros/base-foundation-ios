@@ -10,6 +10,7 @@
 - `getDay` implemented on `Date extension`.
 - `toInt` implemented on `String extension`. 
 - `SelectableViewDataSource` implemented.
+- `SequenceExtension` implemented.
 
 # 0.12.0
 
