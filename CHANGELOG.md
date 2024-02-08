@@ -11,6 +11,7 @@
 - `toInt` implemented on `String extension`. 
 - `SelectableViewDataSource` implemented.
 - `SequenceExtension` implemented.
+- `BaseSettingsController` funcs set to public.
 
 # 0.12.0
 

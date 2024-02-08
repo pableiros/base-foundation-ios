@@ -14,19 +14,17 @@ open class BaseSettingsController: ConfigController {
         case printRawResponse = "Print raw response"
     }
     
-    func getSettingNumber(for keyValue: String) -> NSNumber {
+    public func getSettingNumber(for keyValue: String) -> NSNumber {
         let settings: NSDictionary = self.getSettings()
         return settings[keyValue] as! NSNumber
     }
     
-    func getSettingBool(for keyValue: String) -> Bool {
+    public func getSettingBool(for keyValue: String) -> Bool {
         let settings: NSDictionary = self.getSettings()
         return settings[keyValue] as! Bool
     }
-    
-    // MARK: - private
-    
-    private func getSettings() -> NSDictionary {
+        
+    public func getSettings() -> NSDictionary {
         return self.object(forKey: "Settings")
     }
 }
