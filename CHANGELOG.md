@@ -12,6 +12,7 @@
 - `SelectableViewDataSource` implemented.
 - `SequenceExtension` implemented.
 - `BaseSettingsController` funcs set to public.
+- `getSettings` func implemented on `BaseSettingsController`.
 - `ViewDidLoadViewModifier` implemented.
 - `toCurrency` func implemented on `DoubleExtension`. 
 

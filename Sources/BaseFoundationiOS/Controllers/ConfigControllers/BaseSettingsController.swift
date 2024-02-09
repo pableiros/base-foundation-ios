@@ -24,6 +24,11 @@ open class BaseSettingsController: ConfigController {
         return settings[keyValue] as! Bool
     }
         
+    public func getSettings(for keyValue: String) -> String {
+        let settings: NSDictionary = self.getSettings()
+        return settings[keyValue] as! String
+    }
+    
     public func getSettings() -> NSDictionary {
         return self.object(forKey: "Settings")
     }
