@@ -39,6 +39,10 @@ extension View {
                                                    successHandler: successHandler))
     }
     
+    public func viewDidLoad(handler: SimpleHandler? = nil) -> some View {
+        return self.modifier(ViewDidLoadModifier(handler: handler))
+    }
+    
     // MARK: - alert
     
     public func presentAlert(withTitle title: String,

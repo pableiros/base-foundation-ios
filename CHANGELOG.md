@@ -12,6 +12,7 @@
 - `SelectableViewDataSource` implemented.
 - `SequenceExtension` implemented.
 - `BaseSettingsController` funcs set to public.
+- `ViewDidLoadViewModifier` implemented.
 
 # 0.12.0
 
