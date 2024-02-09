@@ -13,6 +13,7 @@
 - `SequenceExtension` implemented.
 - `BaseSettingsController` funcs set to public.
 - `ViewDidLoadViewModifier` implemented.
+- `toCurrency` func implemented on `DoubleExtension`. 
 
 # 0.12.0
 
