@@ -15,6 +15,7 @@
 - `getSettings` func implemented on `BaseSettingsController`.
 - `ViewDidLoadViewModifier` implemented.
 - `toCurrency` func implemented on `DoubleExtension`. 
+- `toHexString` func implemented on `ColorExtension`.
 
 # 0.12.0
 
