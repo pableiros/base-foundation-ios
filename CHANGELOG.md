@@ -17,6 +17,7 @@
 - `toCurrency` func implemented on `DoubleExtension`. 
 - `toHexString` func implemented on `ColorExtension`.
 - `saveJsonToDocuments` func implemented on `JSONManager`.
+- `UIColorExtension` implemented.
 
 # 0.12.0
 
