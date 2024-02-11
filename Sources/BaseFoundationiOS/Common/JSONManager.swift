@@ -51,4 +51,23 @@ public class JSONManager {
             print(error)
         }
     }
+    
+    public func getDictFromJsonFile(jsonName: String) -> [String: Any]? {
+        guard let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        
+        let fileUrl = documentDirectoryUrl.appendingPathComponent("\(jsonName).json")
+
+        var dict: [String: Any]?
+        
+        do {
+            let data = try Data(contentsOf: fileUrl, options: [])
+            dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+        } catch {
+            print(error)
+        }
+        
+        return dict
+    }
 }

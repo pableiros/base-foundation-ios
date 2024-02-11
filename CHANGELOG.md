@@ -19,6 +19,7 @@
 - `saveJsonToDocuments` func implemented on `JSONManager`.
 - `UIColorExtension` implemented.
 - `getDictArray` func implemented on `DictionaryExtension`.
+- `getDictFromJsonFile` func implemented on `JSONManager`. 
 
 # 0.12.0
 
