@@ -20,6 +20,7 @@
 - `UIColorExtension` implemented.
 - `getDictArray` func implemented on `DictionaryExtension`.
 - `getDictFromJsonFile` func implemented on `JSONManager`. 
+- `SearchableViewDelegate` implemented.
 
 # 0.12.0
 
