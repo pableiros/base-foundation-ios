@@ -1,6 +1,6 @@
 //
 //  JSONManager.swift
-//  
+//
 //
 //  Created by pablo borquez on 30/06/23.
 //
@@ -12,26 +12,43 @@ public class JSONManager {
     
     public func createJsonObject(fromJsonFileName jsonFileName: String, bundle: Bundle = Bundle.main) -> Any? {
         var result: Any?
-
+        
         guard let path = bundle.path(forResource: jsonFileName, ofType: "json") else {
             print("\(jsonFileName).json not found")
             return result
         }
-
+        
         if let jsonData: NSData = try? NSData(contentsOfFile: path, options: .dataReadingMapped) {
             result = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers)
         }
-
+        
         return result
     }
-
+    
     public func createDictionary(from jsonString: String) -> [String: AnyObject]? {
         var result: [String: AnyObject]?
-
+        
         if let data: Data = jsonString.data(using: .utf8) {
             result = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
         }
-
+        
         return result
+    }
+    
+    public func saveJsonToDocuments(dict: [String: Any], jsonName: String) {
+        guard let documentDirectoryUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return
+        }
+        
+        let fileUrl = documentDirectoryUrl.appendingPathComponent("\(jsonName).json")
+                
+        do {
+            let data = try JSONSerialization.data(withJSONObject: dict, options: [])
+            try data.write(to: fileUrl, options: [])
+            
+            print("json: \(fileUrl)")
+        } catch {
+            print(error)
+        }
     }
 }

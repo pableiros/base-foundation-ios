@@ -16,6 +16,7 @@
 - `ViewDidLoadViewModifier` implemented.
 - `toCurrency` func implemented on `DoubleExtension`. 
 - `toHexString` func implemented on `ColorExtension`.
+- `saveJsonToDocuments` func implemented on `JSONManager`.
 
 # 0.12.0
 
