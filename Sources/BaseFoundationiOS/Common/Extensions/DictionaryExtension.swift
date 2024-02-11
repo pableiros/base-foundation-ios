@@ -57,4 +57,8 @@ extension Dictionary where Key == String {
 
         return value
     }
+    
+    public func getDictArray(for key: String) -> [[String: Any]] {
+        return self[key] as? [[String: Any]] ?? [[String: Any]]()
+    }
 }

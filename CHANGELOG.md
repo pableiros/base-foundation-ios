@@ -18,6 +18,7 @@
 - `toHexString` func implemented on `ColorExtension`.
 - `saveJsonToDocuments` func implemented on `JSONManager`.
 - `UIColorExtension` implemented.
+- `getDictArray` func implemented on `DictionaryExtension`.
 
 # 0.12.0
 
