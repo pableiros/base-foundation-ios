@@ -23,6 +23,7 @@
 - `SearchableViewDelegate` implemented.
 - `StartEndDateRangeRule` implemented.
 - `ValidatorInputRangeDate` implemented.
+- `FormViewDelegate` implemented.
 
 # 0.12.0
 
