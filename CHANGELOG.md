@@ -21,6 +21,8 @@
 - `getDictArray` func implemented on `DictionaryExtension`.
 - `getDictFromJsonFile` func implemented on `JSONManager`. 
 - `SearchableViewDelegate` implemented.
+- `StartEndDateRangeRule` implemented.
+- `ValidatorInputRangeDate` implemented.
 
 # 0.12.0
 
