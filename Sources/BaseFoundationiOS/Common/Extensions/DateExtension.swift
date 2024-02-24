@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by pablo borquez on 30/06/23.
 //
@@ -60,5 +60,19 @@ extension Date {
         formatter.dateFormat = "dd"
         
         return formatter.string(from: self).toInt()
+    }
+    
+    public func isEqual(to date: Date,
+                        toGranularity component: Calendar.Component,
+                        in calendar: Calendar = .current) -> Bool {
+        calendar.isDate(self, equalTo: date, toGranularity: component)
+    }
+    
+    public func isInSameYear(as date: Date) -> Bool {
+        return self.isEqual(to: date, toGranularity: .year)
+    }
+    
+    public func isInSameMonth(as date: Date) -> Bool {
+        return self.isEqual(to: date, toGranularity: .month)
     }
 }

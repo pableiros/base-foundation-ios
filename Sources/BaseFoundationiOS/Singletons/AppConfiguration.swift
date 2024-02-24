@@ -22,9 +22,9 @@ final public class AppConfiguration {
     
     func printBaseRESTAPI(_ message: Any?) {
         if AppConfiguration.shared.isOsLoggerRequired {
-            OSLogger.shared.printBaseRESTAPI(message)
+            OSLogger.standard.printBaseRESTAPI(message)
         } else {
-            MainLogger.shared?.printBaseRESTAPI(message)
+            MainLogger.shared?.printBaseRESTAPI(message ?? "nil")
         }
     }
 }

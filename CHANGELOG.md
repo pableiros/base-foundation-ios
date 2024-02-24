@@ -25,6 +25,7 @@
 - `ValidatorInputRangeDate` implemented.
 - `FormViewDelegate` implemented.
 - File managers implemented
+- `shared` renmated to `standard` in `OSLogger`.
 
 # 0.12.0
 

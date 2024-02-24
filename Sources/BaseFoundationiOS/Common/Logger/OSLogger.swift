@@ -9,12 +9,15 @@ import Foundation
 import OSLog
 
 open class OSLogger {
-    public static let shared = OSLogger()
+    public static let standard = OSLogger()
     
     private var isDebugEnabled = true
     private var isErrorDebugEnabled = true
 
     private var loggers = [OSLoggerContainer]()
+    
+    public init() {
+    }
     
     open func debug(subsystem: String, category: String, message: Any?) {
         guard self.isDebugEnabled else { return }
