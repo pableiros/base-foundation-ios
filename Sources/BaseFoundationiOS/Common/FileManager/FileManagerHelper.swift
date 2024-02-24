@@ -8,6 +8,8 @@
 import UIKit
 
 open class FileManagerHelper {
+    static let category = String(describing: FileManagerHelper.self)
+    
     open var directoryName: String {
         fatalError("override required")
     }
@@ -47,13 +49,27 @@ open class FileManagerHelper {
         }
     }
     
-    open func moveFileToTmp(filename: String, url: URL) -> URL {
-        let fileUrl = self.createTmpFileURL(filename: filename)
+    open func copyFileToTmp(filename: String, url: URL) -> URL? {
+        var fileTmpUrl: URL?
         
-        try? FileManager.default.copyItem(at: url, to: fileUrl)
-        try? (fileUrl as NSURL).setResourceValue(URLFileProtection.complete, forKey: .fileProtectionKey)
+        guard url.startAccessingSecurityScopedResource() else { return fileTmpUrl }
         
-        return fileUrl
+        do {
+            let fileUrl = self.createTmpFileURL(filename: filename)
+            
+            try? FileManager.default.removeItem(at: fileUrl)
+            try FileManager.default.copyItem(at: url, to: fileUrl)
+            try (fileUrl as NSURL).setResourceValue(URLFileProtection.complete,
+                                                    forKey: .fileProtectionKey)
+            
+            fileTmpUrl = fileUrl
+        } catch {
+            OSLogger.standard.error(subsystem: AppConfiguration.shared.subsystem,
+                                    category: Self.category,
+                                    message: error)
+        }
+        
+        return fileTmpUrl
     }
     
     open func createTmpFileURL(filename: String) -> URL {

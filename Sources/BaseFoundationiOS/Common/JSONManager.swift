@@ -8,6 +8,8 @@
 import Foundation
 
 public class JSONManager {
+    static let category = String(describing: JSONManager.self)
+    
     public init() { }
     
     public func createJsonObject(fromJsonFileName jsonFileName: String, bundle: Bundle = Bundle.main) -> Any? {
@@ -29,8 +31,13 @@ public class JSONManager {
     public func createJsonObject(from file: URL) -> Any? {
         var result: Any?
         
-        if let jsonData: Data = try? Data(contentsOf: file) {
-            result = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        do {
+            let jsonData = try Data(contentsOf: file)
+            result = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        } catch {
+            OSLogger.standard.error(subsystem: AppConfiguration.shared.subsystem,
+                                    category: Self.category,
+                                    message: error)
         }
         
         return result
