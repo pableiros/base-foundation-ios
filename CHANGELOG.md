@@ -24,6 +24,7 @@
 - `StartEndDateRangeRule` implemented.
 - `ValidatorInputRangeDate` implemented.
 - `FormViewDelegate` implemented.
+- File managers implemented
 
 # 0.12.0
 

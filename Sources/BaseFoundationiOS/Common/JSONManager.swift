@@ -25,6 +25,17 @@ public class JSONManager {
         return result
     }
     
+    
+    public func createJsonObject(from file: URL) -> Any? {
+        var result: Any?
+        
+        if let jsonData: Data = try? Data(contentsOf: file) {
+            result = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
+        }
+        
+        return result
+    }
+    
     public func createDictionary(from jsonString: String) -> [String: AnyObject]? {
         var result: [String: AnyObject]?
         
