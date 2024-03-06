@@ -8,13 +8,17 @@
 import Foundation
 
 extension Double {
-    public func toString() -> String {
-        let stringValue: String
+    public func toString(addZero: Bool = false) -> String {
+        var stringValue: String
         
         if let intValue = Int(exactly: self) {
             stringValue = String(intValue)
         } else {
             stringValue = String(self)
+        }
+        
+        if addZero, self < 10 {
+            stringValue = "0\(stringValue)"
         }
         
         return stringValue

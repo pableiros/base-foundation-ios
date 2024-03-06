@@ -16,7 +16,7 @@ public protocol SearchableViewDelegate {
 
 extension SearchableViewDelegate {
     public var searchResults: [T] {
-        let contentArray: [T]
+        var contentArray: [T]
         
         if self.searchText.isEmpty {
             contentArray = self.contentArray

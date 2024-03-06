@@ -34,7 +34,7 @@ extension View {
     }
     
     public func didSelect<Container: Equatable>(containerSelected: Container?
-                                                , successHandler: @escaping (Container) -> Void) -> some View {
+                                                , successHandler: ((Container) -> Void)?) -> some View {
         return self.modifier(DidSelectViewModifier(containerSelected: containerSelected,
                                                    successHandler: successHandler))
     }

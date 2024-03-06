@@ -12,7 +12,7 @@ public protocol FormViewDelegate: FormViewValidatorDelegate {
     
     var dismiss: DismissAction { get }
     
-    var successHandler: (Container) -> Void { get set }
+    var successHandler: (Container?) -> Void { get set }
     
     var editContainer: Container? { get set }
 }
