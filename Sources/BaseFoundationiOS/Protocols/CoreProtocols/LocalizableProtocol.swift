@@ -11,6 +11,11 @@ public protocol LocalizableProtocol: RawValueDataSource {
 }
 
 extension LocalizableProtocol {
+    @MainActor
+    public var mainActorTranslate: String {
+        return self.translate
+    }
+    
     public var translate: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

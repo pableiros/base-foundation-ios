@@ -26,6 +26,7 @@
 - `FormViewDelegate` implemented.
 - File managers implemented
 - `shared` renmated to `standard` in `OSLogger`.
+- `mainActorTranslate` implemented.
 
 # 0.12.0
 
