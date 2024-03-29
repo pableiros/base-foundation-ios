@@ -27,6 +27,7 @@
 - File managers implemented
 - `shared` renmated to `standard` in `OSLogger`.
 - `mainActorTranslate` implemented.
+- `TmpFileManager` bug fixed.
 
 # 0.12.0
 

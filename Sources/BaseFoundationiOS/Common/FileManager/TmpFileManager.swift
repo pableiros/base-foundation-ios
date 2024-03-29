@@ -30,11 +30,26 @@ open class TmpFileManager: FileManagerHelper {
     }
     
     open func createFileURL(filename: String) -> URL {
-        self.createTmpDirectoryURL().appendingPathComponent(filename)
+        let directoryUrl = self.createTmpDirectoryURL()
+        
+        self.createTmpDirectoryIfNeeded(at: directoryUrl)
+        
+        return directoryUrl.appendingPathComponent(filename)
     }
     
     open func removeFolder() {
         let folderURL = self.createTmpDirectoryURL()
         try? FileManager.default.removeItem(atPath: folderURL.path)
+    }
+    
+    // MARK: - private
+    
+    private func createTmpDirectoryIfNeeded(at folderURL: URL) {
+        var isDirectory: ObjCBool = true
+        
+        if FileManager.default.fileExists(atPath: folderURL.path, isDirectory: &isDirectory) == false {
+            let tmpDirectoryURL = FileManager.default.temporaryDirectory
+            self.createDirectory(at: tmpDirectoryURL, directoryName: self.directoryName)
+        }
     }
 }
