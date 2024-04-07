@@ -28,6 +28,7 @@
 - `shared` renmated to `standard` in `OSLogger`.
 - `mainActorTranslate` implemented.
 - `TmpFileManager` bug fixed.
+- `removeLastThreeIfZeroes` implemented on `StringExtension`. 
 
 # 0.12.0
 

@@ -69,4 +69,11 @@ extension String {
         
         return numberFormatter.string(from: number) ?? double.toString()
     }
+    
+    public func removeLastThreeIfZeroes() -> String {
+        guard self.hasSuffix(".00") else { return self }
+        
+        let endIndex = self.index(self.endIndex, offsetBy: -3)
+        return String(self[..<endIndex])
+    }
 }
