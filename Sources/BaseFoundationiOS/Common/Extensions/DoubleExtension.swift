@@ -24,6 +24,10 @@ extension Double {
         return stringValue
     }
     
+    public func toInt() -> Int {
+        return Int(ceil(self))
+    }
+    
     public func toCurrency(currencyCode: String = "MXN",
                            numberStyle: NumberFormatter.Style = .currency,
                            decimals: Int = 2) -> String {

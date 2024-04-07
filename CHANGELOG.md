@@ -29,6 +29,7 @@
 - `mainActorTranslate` implemented.
 - `TmpFileManager` bug fixed.
 - `removeLastThreeIfZeroes` implemented on `StringExtension`. 
+- `toInt` implemented on `DoubleExtension`.
 
 # 0.12.0
 
