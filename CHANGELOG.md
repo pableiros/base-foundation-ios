@@ -30,6 +30,7 @@
 - `TmpFileManager` bug fixed.
 - `removeLastThreeIfZeroes` implemented on `StringExtension`. 
 - `toInt` implemented on `DoubleExtension`.
+- `isNullable` implemented on `NumberRule`.
 
 # 0.12.0
 
