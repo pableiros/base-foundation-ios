@@ -75,4 +75,8 @@ extension Date {
     public func isInSameMonth(as date: Date) -> Bool {
         return self.isEqual(to: date, toGranularity: .month)
     }
+    
+    public func add(component: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: component, value: value, to: self)!
+    }
 }

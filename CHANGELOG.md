@@ -31,6 +31,7 @@
 - `removeLastThreeIfZeroes` implemented on `StringExtension`. 
 - `toInt` implemented on `DoubleExtension`.
 - `isNullable` implemented on `NumberRule`.
+- `add date` implemented on `DateExtension`.
 
 # 0.12.0
 
