@@ -32,6 +32,7 @@
 - `toInt` implemented on `DoubleExtension`.
 - `isNullable` implemented on `NumberRule`.
 - `add date` implemented on `DateExtension`.
+- `StringProtocolExtension` implemented.
 
 # 0.12.0
 
