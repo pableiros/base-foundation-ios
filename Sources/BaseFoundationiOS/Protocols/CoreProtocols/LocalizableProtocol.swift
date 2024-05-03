@@ -20,8 +20,9 @@ extension LocalizableProtocol {
         return NSLocalizedString(self.rawValue, comment: "")
     }
     
+    @MainActor
     public var text: Text {
-        return Text(self.translate)
+        return Text(self.mainActorTranslate)
     }
     
     public func translate(with arguments: Self...) -> String {
