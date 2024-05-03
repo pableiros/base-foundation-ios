@@ -33,6 +33,7 @@
 - `isNullable` implemented on `NumberRule`.
 - `add date` implemented on `DateExtension`.
 - `StringProtocolExtension` implemented.
+- `uniqued` implemented on `ArrayExtension`.
 
 # 0.12.0
 
