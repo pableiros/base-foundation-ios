@@ -34,6 +34,7 @@
 - `add date` implemented on `DateExtension`.
 - `StringProtocolExtension` implemented.
 - `uniqued` implemented on `ArrayExtension`.
+- `SetExtension` implemented.
 
 # 0.12.0
 
