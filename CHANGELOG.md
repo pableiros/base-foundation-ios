@@ -35,6 +35,7 @@
 - `StringProtocolExtension` implemented.
 - `uniqued` implemented on `ArrayExtension`.
 - `SetExtension` implemented.
+- `UUIDDataSource` implemented.
 
 # 0.12.0
 
