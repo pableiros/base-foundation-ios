@@ -36,6 +36,7 @@
 - `uniqued` implemented on `ArrayExtension`.
 - `SetExtension` implemented.
 - `UUIDDataSource` implemented.
+- `SelectDismissViewModifier` implemented.
 
 # 0.12.0
 

@@ -43,6 +43,13 @@ extension View {
         return self.modifier(ViewDidLoadModifier(handler: handler))
     }
     
+    @available(iOS 17, *)
+    public func selectDismiss<Container: Equatable>(_ container: Container?,
+                                                    successHandler: @escaping (Container) -> Void) -> some View {
+        return self.modifier(SelectDismissViewModifier(containerSelected: container,
+                                                       successHandler: successHandler))
+    }
+    
     // MARK: - alert
     
     public func presentAlert(withTitle title: String,
