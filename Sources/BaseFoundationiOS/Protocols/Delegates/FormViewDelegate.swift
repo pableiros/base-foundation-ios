@@ -12,12 +12,20 @@ public protocol FormViewDelegate: FormViewValidatorDelegate {
     
     var dismiss: DismissAction { get }
     
-    var successHandler: (Container?) -> Void { get set }
+    var successHandler: ((Container?) -> Void)? { get set }
     
     var editContainer: Container? { get set }
 }
 
 extension FormViewDelegate {
+    public var successHandler: ((Container?) -> Void)? {
+        get {
+            return nil
+        }
+        set {
+        }
+    }
+    
     public var isEdit: Bool {
         return self.editContainer != nil
     }
