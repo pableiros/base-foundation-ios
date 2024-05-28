@@ -37,6 +37,7 @@
 - `SetExtension` implemented.
 - `UUIDDataSource` implemented.
 - `SelectDismissViewModifier` implemented.
+- `DismissDelegate` implemented.
 
 # 0.12.0
 
