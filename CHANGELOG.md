@@ -1,4 +1,4 @@
-# master
+# 0.13.0
 
 - `GlobalTask` implemented.
 - `SearchableDelegate` implemented.
@@ -38,6 +38,7 @@
 - `UUIDDataSource` implemented.
 - `SelectDismissViewModifier` implemented.
 - `DismissDelegate` implemented.
+- `BaseForm` implemented.
 
 # 0.12.0
 
