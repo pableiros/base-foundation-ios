@@ -2,6 +2,7 @@
 
 - `EmptyContent` implemented.
 - `FormPicker` implemented.
+- `NumberDataSourceRule` implemented.
 
 # 0.13.0
 
