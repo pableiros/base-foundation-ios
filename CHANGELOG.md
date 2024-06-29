@@ -3,6 +3,8 @@
 - `EmptyContent` implemented.
 - `FormPicker` implemented.
 - `NumberDataSourceRule` implemented.
+- `CommentTextField` implemented.
+- `FechaDataSource` implemented.
 
 # 0.13.0
 

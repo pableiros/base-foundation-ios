@@ -37,3 +37,9 @@ extension Sequence where Element: Hashable {
         return filter { set.insert($0).inserted }
     }
 }
+
+extension Array where Element: FechaDataSource {
+    public func sortDesc() -> Array {
+        self.sorted { $0.fecha > $1.fecha }
+    }
+}
