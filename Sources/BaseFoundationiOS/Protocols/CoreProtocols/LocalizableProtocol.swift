@@ -29,6 +29,7 @@ extension LocalizableProtocol {
         String(format: self.translate, arguments: arguments.map { $0.translate })
     }
     
+    @MainActor
     public func translate(with arguments: String...) -> String {
         String(format: self.translate, arguments: arguments)
     }
