@@ -76,4 +76,11 @@ extension String {
         let endIndex = self.index(self.endIndex, offsetBy: -3)
         return String(self[..<endIndex])
     }
+    
+    public func getRawDecimals() -> String {
+        let rawDecimalsSplit = self.split(separator: ".")
+        let decimals = rawDecimalsSplit.count == 2 ? rawDecimalsSplit[1] : ""
+        
+        return String(decimals)
+    }
 }
