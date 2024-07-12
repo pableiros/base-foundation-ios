@@ -79,4 +79,11 @@ extension Date {
     public func add(component: Calendar.Component, value: Int) -> Date {
         return Calendar.current.date(byAdding: component, value: value, to: self)!
     }
+    
+    public func getMonthName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMM")
+        
+        return dateFormatter.string(from: self)
+    }
 }

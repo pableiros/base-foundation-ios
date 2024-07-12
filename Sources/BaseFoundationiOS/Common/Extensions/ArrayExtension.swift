@@ -43,3 +43,9 @@ extension Array where Element: FechaDataSource {
         self.sorted { $0.fecha > $1.fecha }
     }
 }
+
+extension Array where Element: Sequence {
+    public func joined() -> Array<Element.Element> {
+        return self.reduce([], +)
+    }
+}
