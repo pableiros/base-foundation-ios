@@ -5,6 +5,7 @@
 - `NumberDataSourceRule` implemented.
 - `CommentTextField` implemented.
 - `FechaDataSource` implemented.
+- `joined` array extension implemented.
 
 # 0.13.0
 
