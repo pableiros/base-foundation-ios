@@ -86,4 +86,14 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
+    
+    public func getMonthYearName() -> String {
+        let languagePrefix = Locale.preferredLanguages[0]
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: languagePrefix)
+        dateFormatter.dateFormat = "MMMM yyyy"
+        
+        return dateFormatter.string(from: self)
+    }
 }

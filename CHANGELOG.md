@@ -7,6 +7,7 @@
 - `FechaDataSource` implemented.
 - `joined` array extension implemented.
 - `monthName` date extension implemented.
+- `getMonthYearName` date extension implemented.
 
 # 0.13.0
 
