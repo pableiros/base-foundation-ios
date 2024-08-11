@@ -7,23 +7,39 @@
 
 import SwiftUI
 
-public struct EmptyContent: View {
+public struct EmptyContent<Content> : View where Content : View {
     public let emptySystemName: String
     public let emptyMessage: String
     public let imageWidth: CGFloat
     public let imageHeight: CGFloat
     public let minHeight: CGFloat
     
+    var extraContent: Content?
+    
     public init(emptySystemName: String,
                 emptyMessage: String,
                 imageWidth: CGFloat = 34,
                 imageHeight: CGFloat = 34,
-                minHeight: CGFloat = 125) {
+                minHeight: CGFloat = 125) where Content == EmptyView {
         self.emptySystemName = emptySystemName
         self.emptyMessage = emptyMessage
         self.imageWidth = imageWidth
         self.imageHeight = imageHeight
         self.minHeight = minHeight
+    }
+    
+    public init(emptySystemName: String,
+                emptyMessage: String,
+                imageWidth: CGFloat = 34,
+                imageHeight: CGFloat = 34,
+                minHeight: CGFloat = 125,
+                @ViewBuilder extraContent: () -> Content) {
+        self.emptySystemName = emptySystemName
+        self.emptyMessage = emptyMessage
+        self.imageWidth = imageWidth
+        self.imageHeight = imageHeight
+        self.minHeight = minHeight
+        self.extraContent = extraContent()
     }
     
     public var body: some View {
@@ -44,6 +60,10 @@ public struct EmptyContent: View {
                 .foregroundStyle(.gray)
                 .fontSystemRounded(.callout)
                 .padding([.leading, .trailing, .top])
+            
+            if let extraContent {
+                extraContent
+            }
             
             Spacer()
         }
