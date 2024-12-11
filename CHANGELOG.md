@@ -9,6 +9,7 @@
 - `monthName` date extension implemented.
 - `getMonthYearName` date extension implemented.
 - `performDelay` `async` implemented.
+- `AsyncViewDidLoadModifier` implemented.
 
 # 0.13.0
 

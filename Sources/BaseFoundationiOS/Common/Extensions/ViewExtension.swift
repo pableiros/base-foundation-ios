@@ -43,6 +43,10 @@ extension View {
         return self.modifier(ViewDidLoadModifier(handler: handler))
     }
     
+    public func asyncViewDidLoad(handler: AsyncHandler? = nil) -> some View {
+        return self.modifier(AsyncViewDidLoadModifier(handler: handler))
+    }
+    
     @available(iOS 17, *)
     public func selectDismiss<Container: Equatable>(_ container: Container?,
                                                     successHandler: @escaping (Container) -> Void) -> some View {
