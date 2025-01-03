@@ -11,6 +11,7 @@
 - `performDelay` `async` implemented.
 - `AsyncViewDidLoadModifier` implemented.
 - `FetchContentDelegate` implemented.
+- `FirestoreChain` implemented.
 
 # 0.13.0
 
