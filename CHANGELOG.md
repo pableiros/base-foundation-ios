@@ -12,6 +12,7 @@
 - `AsyncViewDidLoadModifier` implemented.
 - `FetchContentDelegate` implemented.
 - `FirestoreChain` implemented.
+- `FirestoreChainModelDelegate` implemented.
 
 # 0.13.0
 

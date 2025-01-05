@@ -12,11 +12,11 @@ open class FirestoreChain<FirestoreData> {
     
     required public init() { }
     
-    public class func createChain(from firestoreChains: [FirestoreChain.Type]) -> FirestoreChain? {
-        var firestoreChain: FirestoreChain?
+    public class func createChain<Generic>(from firestoreChains: [FirestoreChain<Generic>.Type]) -> FirestoreChain<Generic>? {
+        var firestoreChain: FirestoreChain<Generic>?
 
-        for typeClass: FirestoreChain.Type in firestoreChains.reversed() {
-            let existingLink: FirestoreChain? = firestoreChain
+        for typeClass in firestoreChains.reversed() {
+            let existingLink: FirestoreChain<Generic>? = firestoreChain
             firestoreChain = typeClass.init()
             firestoreChain?.nextChain = existingLink
         }
@@ -36,6 +36,10 @@ open class FirestoreChain<FirestoreData> {
         return firestoreData
     }
     
+    open func logDebug(_ message: String) {
+        print(message)
+    }
+    
     public func breakLink() {
         self.nextChain = nil
     }
@@ -46,6 +50,8 @@ open class FirestoreChain<FirestoreData> {
         if let arrayResult = firestoreData as? Array<Any>,
               arrayResult.isEmpty,
               self.nextChain != nil {
+            self.logDebug("dataArray is empty. Performing delay for 2 seconds")
+
             await GlobalTask.performDelay(seconds: 2)
         } else {
             self.breakLink()
