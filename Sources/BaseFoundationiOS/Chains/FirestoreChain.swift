@@ -12,11 +12,11 @@ open class FirestoreChain<FirestoreData> {
     
     required public init() { }
     
-    public class func createChain<Generic>(from firestoreChains: [FirestoreChain<Generic>.Type]) -> FirestoreChain<Generic>? {
-        var firestoreChain: FirestoreChain<Generic>?
+    public class func createChain<ChainType>(from firestoreChains: [ChainType.Type]) -> ChainType? where ChainType: FirestoreChain<FirestoreData> {
+        var firestoreChain: ChainType?
 
         for typeClass in firestoreChains.reversed() {
-            let existingLink: FirestoreChain<Generic>? = firestoreChain
+            let existingLink: ChainType? = firestoreChain
             firestoreChain = typeClass.init()
             firestoreChain?.nextChain = existingLink
         }
