@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol g {
+public protocol FirestoreChainModelDelegate {
 }
 
 extension FirestoreChainModelDelegate {
