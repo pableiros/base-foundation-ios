@@ -10,7 +10,7 @@ import Foundation
 open class FirestorePassedChain<FirestoreData, AnyObjectContainer>: FirestoreChain<FirestoreData> {
     public var anyObjectPassed: AnyObjectContainer?
     
-    public class func createChai<ChainType>(from firestoreChains: [ChainType.Type], anyObjectPassed: AnyObjectContainer) -> ChainType? where ChainType: FirestorePassedChain<FirestoreData, AnyObjectContainer> {
+    public class func createChain<ChainType>(from firestoreChains: [ChainType.Type], anyObjectPassed: AnyObjectContainer) -> ChainType? where ChainType: FirestorePassedChain<FirestoreData, AnyObjectContainer> {
         
         let chains: ChainType? = FirestoreChain.createChain(from: firestoreChains)
         var currentChain: ChainType? = chains

@@ -12,10 +12,22 @@ public protocol FirestoreChainModelDelegate {
 
 extension FirestoreChainModelDelegate {
     public func handleChain<Container, ChainType>(chainType: ChainType.Type) async throws -> [Container] where ChainType: FirestoreChain<[Container]> {
-        let chainArray = Array(repeating: chainType, count: 2)
+        let chainArray = self.genereteChainArray(chainType: chainType)
         let chain = FirestoreChain.createChain(from: chainArray)
-        let categorias = try await chain?.handle() ?? [Container]()
+        let result = try await chain?.handle() ?? [Container]()
         
-        return categorias
+        return result
+    }
+    
+    public func handleChain<Container, ChainType, AnyObjectContainer>(chainType: ChainType.Type, anyObjectPassed: AnyObjectContainer) async throws -> [Container] where ChainType: FirestorePassedChain<[Container], AnyObjectContainer> {
+        let chainArray = self.genereteChainArray(chainType: chainType)
+        let chain = FirestorePassedChain.createChain(from: chainArray, anyObjectPassed: anyObjectPassed)
+        let result = try await chain?.handle() ?? [Container]()
+        
+        return result
+    }
+    
+    private func genereteChainArray<ChainType>(chainType: ChainType.Type) -> [ChainType.Type] {
+        return Array(repeating: chainType, count: 2)
     }
 }
