@@ -24,16 +24,16 @@ open class FirestoreChain<FirestoreData> {
         return firestoreChain
     }
     
-    open func handle() async throws -> FirestoreData? {
-        var firestoreData: FirestoreData?
+    open func handle(resultData: FirestoreData? = nil) async throws -> FirestoreData? {
+        var resultData = resultData
         
-        if self.nextChain != nil {
-            firestoreData = try await self.nextChain?.handle()
-            
-            await self.handleResult(firestoreData: firestoreData)
+        await self.handleResult(firestoreData: resultData)
+        
+        if self.nextChain != nil && resultData == nil {
+            resultData = try await self.nextChain?.handle(resultData: resultData)
         }
         
-        return firestoreData
+        return resultData
     }
     
     open func logDebug(_ message: String) {
