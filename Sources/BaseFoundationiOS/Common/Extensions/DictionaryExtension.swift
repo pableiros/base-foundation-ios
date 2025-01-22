@@ -58,6 +58,16 @@ extension Dictionary where Key == String {
         return value
     }
     
+    public func get(for key: String) -> UUID? {
+        var uuid: UUID?
+        
+        if let dictValue = self[key] as? String, let uuidValue = UUID(uuidString: dictValue) {
+            uuid = uuidValue
+        }
+        
+        return uuid
+    }
+    
     public func getDictArray(for key: String) -> [[String: Any]] {
         return self[key] as? [[String: Any]] ?? [[String: Any]]()
     }

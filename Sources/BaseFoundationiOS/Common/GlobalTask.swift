@@ -20,7 +20,7 @@ public class GlobalTask {
     
     public static func performDelay(seconds: Double = 0.1) async {
         await withCheckedContinuation { continuation in
-            Self.performDelay {
+            Self.performDelay(seconds: seconds) {
                 continuation.resume()
             }
         }
