@@ -49,11 +49,12 @@ open class FirestoreChain<FirestoreData> {
     private func handleResult(firestoreData: FirestoreData?) async {
         if let arrayResult = firestoreData as? Array<Any>,
               arrayResult.isEmpty,
-              self.nextChain != nil {
+              self.nextChain != nil {            
             self.logDebug("dataArray is empty. Performing delay for 2 seconds")
 
-            await GlobalTask.performDelay(seconds: 2)
-        } else {
+            await GlobalTask.performDelay(seconds: 0.2)
+        } else if self.nextChain != nil {
+            self.logDebug("Attempting to break the link")
             self.breakLink()
         }
     }
