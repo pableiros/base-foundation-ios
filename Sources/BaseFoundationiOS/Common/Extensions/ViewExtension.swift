@@ -74,7 +74,7 @@ extension View {
                              isCancelRequired: Bool = false,
                              okHandler: SimpleHandler? = nil) -> some View {
         self.presentAlert(withTitle: title,
-                          andMessage: error as? String ?? "",
+                          andMessage: error as? String ?? error?.localizedDescription ?? "",
                           isPresented: isPresented,
                           isCancelRequired: isCancelRequired,
                           okHandler: okHandler)
