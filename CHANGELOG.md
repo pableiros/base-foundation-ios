@@ -13,6 +13,8 @@
 - `FetchContentDelegate` implemented.
 - `FirestoreChain` implemented.
 - `FirestoreChainModelDelegate` implemented.
+- `BundleExtension` implemented.
+- `CollectionExtension` implemented`.
 
 # 0.13.0
 
