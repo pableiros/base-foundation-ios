@@ -17,6 +17,6 @@ extension SearchableDelegate {
     }
 
     public func contains(text: String?, searchText: String) -> Bool {
-        return text?.range(of: searchText, options: .caseInsensitive) != nil
+        return text?.range(of: searchText, options: [.diacriticInsensitive, .caseInsensitive]) != nil
     }
 }
