@@ -15,6 +15,7 @@
 - `FirestoreChainModelDelegate` implemented.
 - `BundleExtension` implemented.
 - `CollectionExtension` implemented`.
+- `ModalViewModifier` implemented.
 
 # 0.13.0
 

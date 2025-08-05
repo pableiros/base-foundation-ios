@@ -54,6 +54,10 @@ extension View {
                                                        successHandler: successHandler))
     }
     
+    public func asModal() -> some View {
+        return self.modifier(ModalViewModifier())
+    }
+    
     // MARK: - alert
     
     public func presentAlert(withTitle title: String,
