@@ -58,6 +58,11 @@ extension View {
         return self.modifier(ModalViewModifier())
     }
     
+    public func keyboardToolbar<FocusType: Hashable>(focus: FocusState<FocusType?>.Binding,
+                                                     buttonTitle: String) -> some View {
+        self.modifier(KeyboardToolbarModifier(focus: focus, buttonTitle: buttonTitle))
+    }
+    
     // MARK: - alert
     
     public func presentAlert(withTitle title: String,

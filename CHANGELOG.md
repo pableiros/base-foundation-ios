@@ -16,6 +16,7 @@
 - `BundleExtension` implemented.
 - `CollectionExtension` implemented`.
 - `ModalViewModifier` implemented.
+- `KeyboardToolbarModifier` implemented.
 
 # 0.13.0
 
